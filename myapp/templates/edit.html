@@ -1,0 +1,83 @@
+<!DOCTYPE html> 
+
+<head>
+                <title>MOBILE</title>
+                <!-- Required meta tags -->
+                <meta charset="utf-8">
+                
+                <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          
+                <!-- Bootstrap CSS -->
+              
+                <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+            <style>
+              body{
+                padding: 0px;
+                margin: 0px;
+                background-image:linear-gradient(rgba(248, 241, 241, 0.7),rgba(245, 238, 238, 0.7)), url(/static/images/Image60.jpg);
+                background-size: cover; 
+              }
+              .navbar {
+                background:none;  ;
+                color: black;  
+              }
+              .nav-item{
+                color: white;
+              }
+              .card {
+                padding: 10px;
+              }
+              .jumbotron {
+                background: none;
+                color: aliceblue;
+              }
+              #bt{
+                float: right;
+              
+              }
+              .col-sm{
+                color: aliceblue;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              }
+              .btn{
+                color: aliceblue;
+                
+              }
+              
+              
+              
+            </style>
+<html lang="en">  
+        <html lang="en">
+                <head>
+                  <title>Bootstrap Example</title>
+                  <meta charset="utf-8">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+                </head>
+                   <body>
+                     <div class="container">
+                      <h2>Edit Details</h2>
+
+<body>  
+<form method="POST" class="post-form">  
+        {% csrf_token %}  
+    
+<br>  
+    
+  
+<h3>Category Details</h3>  
+<table border="1">
+    <tr><td height="100",col width="150">Category id</td><td><input type="text" name="id" value="{{dept.id}}"/></td></tr>
+    <tr><td height="100",col width="150">Category Name</td><td><input type="text" name="Category_Name" value="{{dept.Category_Name}}"/></td></tr>
+    <tr><td height="100",col width="150">Category Type</td><td><input type="text" name=" Category_Type" value="{{dept.Category_Type}}"/></td></tr>
+    
+    <tr><td><input type="submit" value="Edit Category"/></td><td></td></tr>
+</table>
+    
+</form>  
+</body>  
+</html>  

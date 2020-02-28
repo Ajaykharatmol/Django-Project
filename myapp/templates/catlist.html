@@ -1,0 +1,114 @@
+<html>
+    <head>
+        <title>MOBILE</title>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+        <!-- Bootstrap CSS -->
+      
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+    <style>
+      body{
+        padding: 0px;
+        margin: 0px;
+        background-image:linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(/static/images/Image1.jpg);
+        background-size: cover; 
+      }
+      .navbar {
+        background:none;  ;
+        color: black;  
+      }
+      .nav-item{
+        color: white;
+      }
+      .card {
+        padding: 10px;
+      }
+      .jumbotron {
+        background: none;
+        color: aliceblue;
+      }
+      #bt{
+        float: right;
+      
+      }
+      .col-sm{
+        color: aliceblue;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      }
+      .btn{
+        color: aliceblue;
+        
+      }
+      
+      
+      
+    </style>
+
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+   <body>
+     <div class="container">
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+                <a class="navbar-brand" href="#">Products</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                          <li class="nav-item">
+                          <a class="nav-link" href="#">About Us</a>
+                          
+                          </li> 
+
+                          <li class="nav-item">
+                              <a class="nav-link" href="/logout">Logout</a>
+                        </li>
+                        </div>
+                        </li>
+                    </ul>
+                  </nav>
+                  <h2><font color="red">Products Details</font></h2>
+      
+    
+       <hr/>  
+        <table class="table table-striped">
+       <form method="post">
+            {% csrf_token %} 
+     <select name="dept">
+       {% for d in depts %}
+        <option value="{{d.id}}">{{d.Category_Name}} </option>           
+       {% endfor%}
+    <input type="submit" value="Show Products" />
+    
+  
+   
+<table>
+    {%for emp in emps %}
+    <div class="table-responsive">
+      <table class="table">
+      <thead>
+    <tr><th>{{emp.id}}</th><th>{{emp.Product_Name}}</th><th>{{emp.Product_Image}}</th>
+      <th>{{emp.Product_Price}}</th><th>{{emp.Product_Description}}</th>
+      <th><a href="addtocart/{{emp.id}}" class="btn btn-outline-light btn-sm">Add to Cart</a></th>   
+       {% endfor %}
+</table>
+
+</form>
+   </body>
+</html>

@@ -1,0 +1,138 @@
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <title>MOBILE</title>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+      <!-- Bootstrap CSS -->
+    
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" >
+  <style>
+    body{
+      padding: 0px;
+      margin: 0px;
+      background-image:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url(/static/images/Image60.jpg);
+      background-size: cover; 
+    }
+    .navbar {
+      background:none;  ;
+      color: black;  
+    }
+    .nav-item{
+      color: white;
+    }
+    .card {
+      padding: 10px;
+    }
+    .jumbotron {
+      background: none;
+      color: aliceblue;
+    }
+    #bt{
+      float: right;
+    
+    }
+    .col-sm{
+      color: aliceblue;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    .btn{
+      color: aliceblue;
+      
+    }
+    
+    
+    
+  </style>
+  </head>
+    <body>
+        
+        <div class="container">
+            <nav class="navbar navbar-expand-md navbar-dark">
+                <a class="navbar-brand" href="/">Elecronics Store</a>
+
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                           
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                                  
+                           
+                                <a class="dropdown-item" href="/admin">Admin</a>
+                            <a class="dropdown-item" href="/showallCat">Category</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About Us</a>
+                            </li> 
+                        
+                         
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="/login">Login</a>
+                          
+                                    <div class="dropdown-menu" aria-labelledby="dropdownId"></div>
+                                    <a class="dropdown-item" href="/">Logout</a>
+                      </li>
+                          
+                                
+                                    
+                                    </li>
+                                    <li class="nav-item">
+                                     <a href="/showallcartitems"><img src="/static/images/cart.png" alt="" width="20px" height="20px"></a> 
+                                  </li>
+
+                                  </div>
+                    </ul>
+                    
+            </nav>
+            
+
+
+              <div class="jumbotron">
+                  <h1 class="display-5 text-right">Elecronics Store</h1>
+                      <p class="lead">
+                          <a class="btn btn-outline-light"id="bt" href="#" role="button">More Items</a>
+                      </p>  
+                  </div>
+
+
+              <section>
+              <div class="container">
+                  {% csrf_token %} 
+                  <div class="row">
+                      {% for d in depts %}
+                      <div class="col-sm">
+                      <div class="card-body">
+                      <h5 class="card-title">{{d.Category_Name}}</h5>
+                      <p class="card-text text-center"></p>
+                      <a href="/login" class="btn btn-outline-light btn-sm">Explore More</a>
+                     </div>
+                    </div> 
+                         
+                  {% endfor%} 
+                </div>
+              </section>   
+
+                 
+              
+                    
+                   
+              
+      
+     
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    </body>
+  </html>
